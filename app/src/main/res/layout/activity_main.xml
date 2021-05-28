@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Know Your Artist"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true" />
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_marginTop="100dp"
+        android:layout_above="@id/sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/qr"
+            android:layout_marginBottom="80dp"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:src="@drawable/artist"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/sp"
+        android:layout_above="@id/ll"/>
+<LinearLayout
+    android:id="@+id/ll"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_marginBottom="30dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="120dp">
+    <Button
+        android:layout_width="190dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_background"
+        android:layout_height="0dp"
+        android:text="Start Scanning"
+        android:onClick="scan"
+        android:textStyle="bold"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+    <Button
+        android:background="@drawable/button_background"
+        android:layout_width="190dp"
+        android:layout_weight="1"
+        android:text="Generate QR"
+        android:layout_height="0dp"
+        android:onClick="gen"
+        android:textStyle="bold"/>
+</LinearLayout>
+</RelativeLayout>

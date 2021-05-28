@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.airbnb.lottie.LottieAnimationView
+    android:layout_width="300dp"
+    app:lottie_autoPlay="true"
+    app:lottie_fileName="qr.json"
+    app:lottie_repeatCount="10"
+    app:lottie_repeatMode="restart"
+    android:id="@+id/lottie"
+    android:layout_height="320dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generating QR..."
+        android:textStyle="bold"
+        android:id="@+id/gentext"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="30dp"/>
+    <ImageView
+        android:visibility="invisible"
+        android:layout_width="300dp"
+        android:id="@+id/qr"
+        android:layout_height="300dp"/>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="Close"
+            android:id="@+id/button"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+</FrameLayout>

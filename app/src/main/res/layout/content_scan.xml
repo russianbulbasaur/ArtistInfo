@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:columnCount="2"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+   <TextView
+       android:layout_width="wrap_content"
+       android:text="Place the QR Code within the box"
+       android:textStyle="bold"
+       android:layout_above="@id/sp"
+       android:textSize="17dp"
+       android:layout_centerHorizontal="true"
+       android:layout_height="wrap_content"/>
+   <Space
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:id="@+id/sp"
+       android:layout_above="@id/scanner"/>
+   <com.budiyev.android.codescanner.CodeScannerView
+       android:layout_width="match_parent"
+       android:layout_marginRight="50dp"
+       android:layout_marginLeft="50dp"
+       app:frameColor="@color/design_default_color_primary"
+       android:id="@+id/scanner"
+       android:layout_centerInParent="true"
+       android:layout_height="300dp"/>
+   <Space android:layout_width="match_parent"
+       android:id="@+id/sp1"
+      android:layout_height="10dp"
+       android:layout_below="@id/scanner"/>
+   <ImageView
+       android:layout_below="@id/sp1"
+       android:layout_alignParentRight="true"
+       android:layout_marginRight="50dp"
+       android:id="@+id/files"
+       android:src="@drawable/ic_baseline_file_copy_24"
+       android:layout_width="40dp"
+       android:layout_height="40dp"/>
+</RelativeLayout>
